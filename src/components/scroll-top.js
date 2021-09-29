@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { jsx } from "theme-ui";
 
 import { FaArrowUp } from "react-icons/fa";
@@ -23,7 +23,10 @@ export default function ScrollTop() {
     });
   };
 
-  window.addEventListener("scroll", toggleVisible);
+  //
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisible);
+  });
 
   return (
     <div
